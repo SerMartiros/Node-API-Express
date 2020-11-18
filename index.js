@@ -10,7 +10,7 @@ let port = process.env.port || 8080;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Hello Ackee");
+    res.send("Hello World! This is a simple Node API");
 })
 
 app.get("/data", (req, res) => {
