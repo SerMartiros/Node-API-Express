@@ -6,6 +6,23 @@ const app = express();
 const router = express.Router();
 
 let port = process.env.port || 8080;
+const maxSeconds = 10;
+let counter = 0;
+
+
+function ResetCounter() {
+    counter++;
+    console.log(counter);
+    if (counter >= maxSeconds) {
+        console.log("Done");
+        counter = 0;
+    }
+}
+
+setInterval(() => {
+    ResetCounter();
+}, 1000);
+
 
 app.use(express.json());
 
@@ -22,7 +39,7 @@ app.get("/data/employees", (req, res) => {
 })
 app.get("/data/employees/:id", (req, res) => {
     const employee = importData.employees.find(c => c.id === req.params.id);
-    if(!employee){
+    if (!employee) {
         res.status(404).send("Employee id doesnt exist");
     }
     res.send(employee);
@@ -30,7 +47,7 @@ app.get("/data/employees/:id", (req, res) => {
 
 app.get("/data/employees/:id/:info", (req, res) => {
     const employee = importData.employees.find(c => c.id === req.params.id);
-    if(!employee){
+    if (!employee) {
         res.status(404).send("Employee id doesnt exist");
     }
     switch (req.params.info) {
@@ -61,7 +78,7 @@ app.post("/data/employees", (req, res) => {
 
 app.put("/data/employees/:id", (req, res) => {
     const employee = importData.employees.find(c => c.id === req.params.id);
-    if(!employee){
+    if (!employee) {
         res.status(404).send("Employee id doesnt exist");
     }
 
@@ -75,7 +92,7 @@ app.put("/data/employees/:id", (req, res) => {
 
 app.delete("/data/employees/:id", (req, res) => {
     const employee = importData.employees.find(c => c.id === req.params.id);
-    if(!employee){
+    if (!employee) {
         res.status(404).send("Employee id doesnt exist");
     }
 
