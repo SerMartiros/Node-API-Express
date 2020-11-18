@@ -1,0 +1,70 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John",
+      "surname": "Doe",
+      "status": "working",
+      "salary": "77000",
+      "position": "backend developer"
+    },
+    {
+      "id": "2",
+      "name": "Mike",
+      "surname": "Tyson",
+      "status": "working",
+      "salary": "59000",
+      "position": "frontend developer"
+    },
+    {
+      "id": "3",
+      "name": "Mr",
+      "surname": "Smith",
+      "status": "working",
+      "salary": "61000",
+      "position": "rightend developer"
+    },
+    {
+      "id": "4",
+      "name": "Iron",
+      "surname": "Man",
+      "status": "away",
+      "salary": "27000",
+      "position": "leftend developer"
+    },
+    {
+      "id": "5",
+      "name": "John",
+      "surname": "Snow",
+      "status": "sick",
+      "salary": "7000",
+      "position": "fullstack developer"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Ackee",
+      "status": "Open",
+      "description": "Software Company"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "status": "Open",
+      "description": "Technology Company"
+    },
+    {
+      "id": "3",
+      "name": "Apple",
+      "status": "Open",
+      "description": "Technology Company"
+    },
+    {
+      "id": "4",
+      "name": "McDonalds",
+      "status": "Should Close",
+      "description": "Fat Producer"
+    }
+  ]
+}
