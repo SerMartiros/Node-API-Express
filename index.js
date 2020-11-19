@@ -16,6 +16,7 @@ function ResetCounter() {
     if (counter >= maxSeconds) {
         console.log("Done");
         counter = 0;
+        console.log("test branch");
     }
 }
 
